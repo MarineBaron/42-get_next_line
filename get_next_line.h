@@ -6,7 +6,7 @@
 /*   By: mbaron <mbaron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 19:35:01 by mbaron            #+#    #+#             */
-/*   Updated: 2018/01/26 19:50:02 by mbaron           ###   ########.fr       */
+/*   Updated: 2018/01/27 12:04:11 by mbaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include "libft.h"
 # define BUF_SIZE 32
+# define FD_NB 256
 
 int		get_next_line(int fd, char **line);
 #endif
