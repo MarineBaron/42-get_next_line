@@ -6,7 +6,7 @@
 #    By: mbaron <mbaron@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/26 19:10:49 by mbaron            #+#    #+#              #
-#    Updated: 2018/01/26 19:59:48 by mbaron           ###   ########.fr        #
+#    Updated: 2018/01/29 13:10:08 by mbaron           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,15 +14,18 @@ NAME		=	test_gnl
 
 DIR			=	.
 
-DIR_LIB		=	$(DIR)/libft
+DIR_GNL		=	..
+
+DIR_LIB		=	$(DIR_GNL)/libft
 
 LIB			=	-L$(DIR_LIB) -lft
 
 HEADERS		=	-I $(DIR)				\
+				-I $(DIR_GNL)			\
 				-I $(DIR_LIB)/includes
 
 SRCS		=	$(DIR)/main.c			\
-				$(DIR)/get_next_line.c
+				$(DIR_GNL)/get_next_line.c
 
 OBJS		=	$(SRCS:.c=.o)
 

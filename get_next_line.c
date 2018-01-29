@@ -6,7 +6,7 @@
 /*   By: mbaron <mbaron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 18:19:50 by mbaron            #+#    #+#             */
-/*   Updated: 2018/01/27 12:28:04 by mbaron           ###   ########.fr       */
+/*   Updated: 2018/01/29 13:06:15 by mbaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,14 +61,14 @@ int			get_next_line(int fd, char **line)
 
 	if (fd < 0 || BUF_SIZE < 0 || !line || read(fd, buf, 0) < 0)
 		return (-1);
-	if (!strs[fd] &&!(strs[fd] = ft_strnew(0)))
+	if (!strs[fd] && !(strs[fd] = ft_strnew(0)))
 		return (-1);
 	str = strs[fd];
 	res = 0;
 	while ((!ft_strchr(str, '\n')) && (res = read(fd, buf, BUF_SIZE)) > 0)
 	{
-			buf[BUF_SIZE] = '\0';
-			get_new_buf(&str, buf, res);
+		buf[BUF_SIZE] = '\0';
+		get_new_buf(&str, buf, res);
 	}
 	if (res == -1)
 		return (-1);
